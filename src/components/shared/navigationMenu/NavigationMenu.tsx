@@ -6,7 +6,7 @@ import Button from "../button/Button";
 
 export default function NavigationMenu() {
     return (
-        <div className="flex justify-between mx-4 text-grey_15">
+        <div className="flex justify-between mx-4 mb-4 text-grey_15">
             <Image
                 src="assets/svg/logo.svg"
                 alt="Skillbridge official logo"
