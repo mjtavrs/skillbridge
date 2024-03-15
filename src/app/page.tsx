@@ -1,11 +1,10 @@
+import BenefitsContainer from "@/components/home/benefitsContainer/BenefitsContainer";
 import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
+import HomeVideo from "../../public/assets/png/covers/homeVideo.png";
 import Companies from "@/components/home/companies/Companies";
 import Video from "@/components/shared/video/Video";
 import Hero from "@/components/home/hero/Hero";
 import Cta from "@/components/shared/cta/Cta";
-
-import HomeVideo from "../../public/assets/png/covers/homeVideo.png";
-import HomeSection from "@/components/home/homeSection/HomeSection";
 
 export default function Home() {
   return (
@@ -17,8 +16,7 @@ export default function Home() {
       <Video
         cover={HomeVideo}
       />
-      <div className="mb-12"></div>
-      <HomeSection />
+      <BenefitsContainer />
     </>
   );
 }
