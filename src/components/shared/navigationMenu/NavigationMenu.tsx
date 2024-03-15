@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Button from "../button/Button";
