@@ -5,6 +5,7 @@ import Hero from "@/components/home/hero/Hero";
 import Cta from "@/components/shared/cta/Cta";
 
 import HomeVideo from "../../public/assets/png/covers/homeVideo.png";
+import HomeSection from "@/components/home/homeSection/HomeSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Video
         cover={HomeVideo}
       />
+      <div className="mb-12"></div>
+      <HomeSection />
     </>
   );
 }
