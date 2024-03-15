@@ -29,6 +29,9 @@ const config: Config = {
         "grey_40": "#656567",
         "grey_60": "#98989a",
         "grey_70": "#b3b3b3",
+      },
+      transformOrigin: {
+        "play-video": "50% 50%"
       }
     },
   },

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Companies() {
     return (
-        <div className="flex bg-white_99 border-[1px] border-white_95 p-3 mx-4 mt-8 rounded-lg">
+        <div className="flex bg-white_99 border-[1px] border-white_95 p-3 mx-4 my-8 rounded-lg">
             <div className="border-r-[1px] border-white_95 py-5 px-8 inline-block">
                 <Image
                     src="assets/svg/logos/zapier.svg"

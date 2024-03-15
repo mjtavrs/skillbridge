@@ -1,7 +1,10 @@
+import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
 import Companies from "@/components/home/companies/Companies";
+import Video from "@/components/shared/video/Video";
 import Hero from "@/components/home/hero/Hero";
 import Cta from "@/components/shared/cta/Cta";
-import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
+
+import HomeVideo from "../../public/assets/png/covers/homeVideo.png";
 
 export default function Home() {
   return (
@@ -10,6 +13,9 @@ export default function Home() {
       <NavigationMenu />
       <Hero />
       <Companies />
+      <Video
+        cover={HomeVideo}
+      />
     </>
   );
 }
