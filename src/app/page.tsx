@@ -7,6 +7,7 @@ import Companies from "@/components/home/companies/Companies";
 import Video from "@/components/shared/video/Video";
 import Hero from "@/components/home/hero/Hero";
 import Cta from "@/components/shared/cta/Cta";
+import PricesContainer from "@/components/home/pricesContainer/PricesContainer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <BenefitsContainer />
       <CoursesContainer />
       <TestimonialsContainer />
+      <PricesContainer />
     </>
   );
 }
