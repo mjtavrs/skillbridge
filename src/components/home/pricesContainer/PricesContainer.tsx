@@ -20,6 +20,20 @@ export default function PricesContainer() {
                         "Early access to new courses and updates."
                     ]}
                 />
+                <PricesCard
+                    planCategory="Pro"
+                    planPrice="79"
+                    availableFeatures={[
+                        "Access to selected free courses.",
+                        "Limited course materials and resources.",
+                        "Basic community support.",
+                        "No certification upon completion.",
+                        "Ad-supported platform.",
+                        "Access to exclusive Pro Plan community forums.",
+                        "Early access to new courses and updates."
+                    ]}
+                    unavailableFeatures={[]}
+                />
             </div>
         </div>
     );
