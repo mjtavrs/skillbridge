@@ -12,7 +12,6 @@ export default function TestimonialsContainer() {
             <HomeSection
                 title="Our Testimonials"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, assumenda. Aut ipsa, obcaecati omnis rerum error eaque, dicta cum, nihil expedita voluptates commodi? Totam facilis ea earum culpa, officiis eum!"
-                link="#"
             >
                 <TestimonialsCard
                     userTestimonial="The web design course provided a solid foundation for me. The instructors were knowledgeable and supportive, and the interactive learning environment was engaging. I highly recommend it!"

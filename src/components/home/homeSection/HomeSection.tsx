@@ -4,11 +4,10 @@ import { ReactNode } from "react";
 type Props = {
     title: string,
     description: string,
-    link: string,
     children: ReactNode
 }
 
-export default function HomeSection({ title, description, link, children }: Props) {
+export default function HomeSection({ title, description, children }: Props) {
     return (
         <div className="mx-4">
             <h2 className="font-semibold text-3xl text-grey_15 mb-1">
@@ -19,7 +18,7 @@ export default function HomeSection({ title, description, link, children }: Prop
             </p>
             <div className="bg-white_99 border-[1px] border-white_95 py-3 px-5 mb-10 inline-block">
                 <Link
-                    href={link}
+                    href="#"
                     className="font-medium text-grey_15 text-sm"
                 >
                     View All
