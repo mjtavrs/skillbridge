@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 
 type Props = {
     cover: StaticImageData
@@ -19,7 +19,7 @@ export default function Video({ cover }: Props) {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <Image
-                        src="assets/svg/play.svg"
+                        src="/assets/svg/play.svg"
                         alt=""
                         height="54"
                         width="54"

@@ -5,7 +5,7 @@ export default function CtaHome() {
     return (
         <div className="flex items-center gap-3 bg-white_99 border-[1px] border-white_95 rounded-lg mx-4 mt-12 mb-4 p-4 relative">
             <Image
-                src="/assets/svg/lines.svg"
+                src="assets/svg/lines.svg"
                 alt="Lines for the CTA"
                 height="43"
                 width="39"
