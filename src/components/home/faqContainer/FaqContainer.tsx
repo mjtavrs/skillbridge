@@ -20,7 +20,38 @@ export default function FaqContainer() {
                     </Link>
                 </div>
             </div>
-            <FaqCard />
+            <div className="flex flex-col gap-5">
+                <FaqCard
+                    faqTitle="Can I enroll in multiple courses at once?"
+                    faqAnswer="Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience."
+                    faqLinkTitle="Enrollment Process for Different Courses"
+                    faqLink="#"
+                />
+                <FaqCard
+                    faqTitle="What kind of support can I expect from instructors?"
+                    faqAnswer="Sorry, an answer was not provided for this question."
+                    faqLinkTitle="This answer is under construction by our team."
+                    faqLink="#"
+                />
+                <FaqCard
+                    faqTitle="Are the courses self-paced or do they have specific start and end dates?"
+                    faqAnswer="Sorry, an answer was not provided for this question."
+                    faqLinkTitle="This answer is under construction by our team."
+                    faqLink="#"
+                />
+                <FaqCard
+                    faqTitle="Are there any prerequisites for the courses?"
+                    faqAnswer="Sorry, an answer was not provided for this question."
+                    faqLinkTitle="This answer is under construction by our team."
+                    faqLink="#"
+                />
+                <FaqCard
+                    faqTitle="Can I download the course materials for offline access?"
+                    faqAnswer="Sorry, an answer was not provided for this question."
+                    faqLinkTitle="This answer is under construction by our team."
+                    faqLink="#"
+                />
+            </div>
         </div>
     );
 }

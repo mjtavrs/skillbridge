@@ -7,13 +7,13 @@ import Link from "next/link";
 import { FaPlus, FaArrowRight } from "react-icons/fa6";
 
 type Props = {
-    FaqTitle: string,
-    FaqAnswer: string,
-    FaqLink: string,
-    FaqLinkTitle: string
+    faqTitle: string,
+    faqAnswer: string,
+    faqLink: string,
+    faqLinkTitle: string
 }
 
-export default function FaqCard() {
+export default function FaqCard({ faqTitle, faqAnswer, faqLink, faqLinkTitle }: Props) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function FaqCard() {
             <div className="overflow-hidden">
                 <div className="flex items-center gap-8">
                     <h3 className="text-grey_15 font-medium leading-[150%]">
-                        Can I enroll in multiple courses at once?
+                        {faqTitle}
                     </h3>
                     <div
                         className="bg-orange_95 p-3 inline-block h-11 rounded-md"
@@ -35,9 +35,9 @@ export default function FaqCard() {
                         <motion.div
                             initial={false}
                             animate={{
-                                rotate: isOpen ? -45 : 0
+                                rotate: isOpen ? -405 : 0
                             }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.6 }}
                         >
                             <FaPlus
                                 className="text-xl text-grey_15"
@@ -59,14 +59,14 @@ export default function FaqCard() {
                 >
                     <div className="flex flex-col gap-5 border-t-[1px] border-white_95 pt-5">
                         <p className="text-sm text-grey_30 leading-[150%]">
-                            Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.
+                            {faqAnswer}
                         </p>
                         <div className="bg-white_97 flex items-center border-[1px] border-white_95 px-5 py-3 rounded-md">
                             <h4 className="text-sm text-grey_20 font-medium leading-[150%]">
-                                Enrollment Process for Different Courses
+                                {faqLinkTitle}
                             </h4>
                             <Link
-                                href="#"
+                                href={faqLink}
                             >
                                 <div className="bg-white p-3 rounded-[9999px]">
                                     <FaArrowRight
