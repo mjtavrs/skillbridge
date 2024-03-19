@@ -9,6 +9,7 @@ import Footer from "@/components/shared/footer/Footer";
 import Video from "@/components/shared/video/Video";
 import Hero from "@/components/home/hero/Hero";
 import Cta from "@/components/shared/cta/Cta";
+import FaqContainer from "@/components/home/faqContainer/FaqContainer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <CoursesContainer />
       <TestimonialsContainer />
       <PricesContainer />
+      <FaqContainer />
       <Footer />
     </>
   );
