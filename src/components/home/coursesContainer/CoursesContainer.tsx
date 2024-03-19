@@ -9,7 +9,6 @@ export default function CoursesContainer() {
             <HomeSection
                 title="Our Courses"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ratione nisi est natus quidem aliquam modi, aut ipsa similique pariatur a et id explicabo, harum vero sunt. Amet, optio necessitatibus?"
-                link="#"
             >
                 <CoursesCard
                     cover={webDesignCover}
