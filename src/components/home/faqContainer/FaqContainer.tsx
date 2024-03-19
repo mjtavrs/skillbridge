@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FaqCard from "../faqCard/FaqCard";
 
 export default function FaqContainer() {
     return (
@@ -19,7 +20,7 @@ export default function FaqContainer() {
                     </Link>
                 </div>
             </div>
-            {/* FAQ Cards to come here */}
+            <FaqCard />
         </div>
     );
 }
