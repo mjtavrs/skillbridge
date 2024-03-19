@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { FaPlus, FaArrowRight } from "react-icons/fa6";
@@ -57,20 +57,20 @@ export default function FaqCard() {
                     animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
                     transition={{ duration: 0.4 }}
                 >
-                    <div className="border-t-[1px] border-white_95 pt-5">
-                        <p>
+                    <div className="flex flex-col gap-5 border-t-[1px] border-white_95 pt-5">
+                        <p className="text-sm text-grey_30 leading-[150%]">
                             Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.
                         </p>
-                        <div>
-                            <h4>
+                        <div className="bg-white_97 flex items-center border-[1px] border-white_95 px-5 py-3 rounded-md">
+                            <h4 className="text-sm text-grey_20 font-medium leading-[150%]">
                                 Enrollment Process for Different Courses
                             </h4>
                             <Link
                                 href="#"
                             >
-                                <div>
+                                <div className="bg-white p-3 rounded-[9999px]">
                                     <FaArrowRight
-                                        className=""
+                                        className="text-xl text-grey_30"
                                     />
                                 </div>
                             </Link>
