@@ -1,41 +1,66 @@
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 
 import Tag from "@/components/shared/tag/Tag";
 
-export default function CourseFullCard() {
+type Props = {
+    courseTitle: string,
+    courseDescription: string,
+    courseLink: string,
+    courseImages: Array<StaticImageData>,
+    courseTags: Array<string>,
+    courseAuthor: string,
+    courseCurriculum: Array<string>
+}
+
+export default function CourseFullCard({ courseTitle, courseDescription, courseLink, courseImages, courseTags, courseAuthor, courseCurriculum }: Props) {
     return (
         <div className="bg-white p-6 rounded-lg">
             <div className="flex flex-col gap-6">
                 <div>
                     <h3 className="text-lg text-grey_15 font-semibold mb-1 leading-[150%]">
-                        Web Design Fundamentals
+                        {courseTitle}
                     </h3>
                     <p className="text-sm text-grey_35 mb-5 leading-[150%]">
-                        Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.
+                        {courseDescription}
                     </p>
                     <div className="bg-white_99 border-[1px] border-white_95 px-4 py-3 rounded-md inline-block">
                         <Link
-                            href="#"
+                            href={courseLink}
                             className="text-sm text-grey_15 font-medium leading-[150%]"
                         >
                             View Course
                         </Link>
                     </div>
                 </div>
-                {/* <div>
-                    Images will come here
-                </div> */}
+                <div className="flex justify-between">
+                    {
+                        courseImages.map((image, index) => (
+                            <div className="relative h-[110px] w-[110px]" key={index}>
+                                <Image
+                                    src={image}
+                                    alt={`${courseTitle} course image`}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-md"
+                                />
+                            </div>
+                        ))
+                    }
+                </div>
                 <div className="flex flex-col gap-4 mb-10">
                     <div className="flex gap-2">
-                        <Tag
-                            title="4 Weeks"
-                        />
-                        <Tag
-                            title="Beginner"
-                        />
+                        {
+                            courseTags.map((tag, index) => (
+                                <Tag
+                                    title={tag}
+                                    key={index}
+                                />
+                            ))
+                        }
                     </div>
                     <h4 className="text-grey_15 font-medium">
-                        By John Smith
+                        By {courseAuthor}
                     </h4>
                 </div>
             </div>
@@ -46,46 +71,21 @@ export default function CourseFullCard() {
                     </h4>
                 </div>
                 <div className="p-6">
-                    <div className="pb-5">
-                        <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
-                            01
-                        </h3>
-                        <p className="text-sm text-grey_20 font-medium leading-[150%]">
-                            Introduction to HTML
-                        </p>
-                    </div>
-                    <div className="border-y-[1px] border-white_95 py-5">
-                        <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
-                            02
-                        </h3>
-                        <p className="text-sm text-grey_20 font-medium leading-[150%]">
-                            Styling with CSS
-                        </p>
-                    </div>
-                    <div className="border-y-[1px] border-white_95 py-5">
-                        <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
-                            03
-                        </h3>
-                        <p className="text-sm text-grey_20 font-medium leading-[150%]">
-                            Introduction to Responsive Design
-                        </p>
-                    </div>
-                    <div className="border-y-[1px] border-white_95 py-5">
-                        <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
-                            04
-                        </h3>
-                        <p className="text-sm text-grey_20 font-medium leading-[150%]">
-                            Design Principles for Web
-                        </p>
-                    </div>
-                    <div className="pt-5">
-                        <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
-                            05
-                        </h3>
-                        <p className="text-sm text-grey_20 font-medium leading-[150%]">
-                            Building a Basic Website
-                        </p>
-                    </div>
+                    {
+                        courseCurriculum.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`${index === 0 ? "pb-5" : index === courseCurriculum.length - 1 ? "pt-5" : "border-y-[1px] border-white_95 py-5"}`}
+                            >
+                                <h3 className="text-3xl text-grey_15 font-extrabold leading-[150%]">
+                                    0{index + 1}
+                                </h3>
+                                <p className="text-sm text-grey_20 font-medium leading-[150%]">
+                                    {item}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
