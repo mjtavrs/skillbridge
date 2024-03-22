@@ -37,7 +37,7 @@ export default function CurriculumClass({ classes }: Props) {
         }
     }
 
-    const timeVariants = {
+    const durationVariants = {
         selected: {
             backgroundColor: "#ffeacc"
         },
@@ -69,7 +69,7 @@ export default function CurriculumClass({ classes }: Props) {
                         <motion.div
                             initial={false}
                             animate={selectedItems[index] ? "selected" : "unselected"}
-                            variants={timeVariants}
+                            variants={durationVariants}
                             className="bg-white_97 flex items-center gap-1 p-3 text-grey_35 text-sm rounded-md w-fit"
                         >
                             <div>
