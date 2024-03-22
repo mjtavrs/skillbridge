@@ -1,12 +1,14 @@
+import CurriculumCard from "@/components/openCourse/curriculumCard/CurriculumCard";
 import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
-import Footer from "@/components/shared/footer/Footer";
-import Cta from "@/components/shared/cta/Cta";
 import PageHero from "@/components/shared/pageHero/PageHero";
+import Footer from "@/components/shared/footer/Footer";
 import Video from "@/components/shared/video/Video";
+import Cta from "@/components/shared/cta/Cta";
 
 import UiUxCover from "../../../public/assets/png/covers/coursesPage/uiUxDesign/1.png";
 
 export default function Course() {
+
     return (
         <>
             <Cta />
@@ -20,7 +22,17 @@ export default function Course() {
                     cover={UiUxCover}
                 />
             </div>
-            {/* Curriculum info will come here */}
+            <div className="mx-4">
+                <CurriculumCard
+                    moduleNumber="01"
+                    moduleTitle="Introduction to UI/UX Design"
+                    moduleClasses={[
+                        { title: "Understanding UI/UX Design Principles", duration: "45 Minutes" },
+                        { title: "Importance of User-Centered Design", duration: "1 Hour" },
+                        { title: "The Role of UI/UX Design in Product Development", duration: "45 minutes" }
+                    ]}
+                />
+            </div>
             <Footer />
         </>
     );
