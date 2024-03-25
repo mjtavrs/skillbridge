@@ -17,22 +17,38 @@ export default function AchievementsContainer() {
             <div className="flex flex-col gap-5 mt-12">
                 <AboutCard
                     info={[
-                        { icon: < FaCrown />, title: "Trusted by Thousands", description: "We have successfully served thousands of students, helping them unlock their potential and achieve their career goals." }
+                        {
+                            icon: < FaCrown />,
+                            title: "Trusted by Thousands",
+                            description: "We have successfully served thousands of students, helping them unlock their potential and achieve their career goals."
+                        }
                     ]}
                 />
                 <AboutCard
                     info={[
-                        { icon: < FaMedal />, title: "Award-Winning Courses", description: "Our courses have received recognition and accolades in the industry for their quality, depth of content, and effective teaching methodologies." }
+                        {
+                            icon: < FaMedal />,
+                            title: "Award-Winning Courses",
+                            description: "Our courses have received recognition and accolades in the industry for their quality, depth of content, and effective teaching methodologies."
+                        }
                     ]}
                 />
                 <AboutCard
                     info={[
-                        { icon: < FaMasksTheater />, title: "Positive Student Feedback", description: "We take pride in the positive feedback we receive from our students, who appreciate the practicality and relevance of our course materials." }
+                        {
+                            icon: < FaMasksTheater />,
+                            title: "Positive Student Feedback",
+                            description: "We take pride in the positive feedback we receive from our students, who appreciate the practicality and relevance of our course materials."
+                        }
                     ]}
                 />
                 <AboutCard
                     info={[
-                        { icon: < FaShieldHalved />, title: "Industry Partnerships", description: "We have established strong partnerships with industry leaders, enabling us to provide our students with access to the latest tools and technologies" }
+                        {
+                            icon: < FaShieldHalved />,
+                            title: "Industry Partnerships",
+                            description: "We have established strong partnerships with industry leaders, enabling us to provide our students with access to the latest tools and technologies"
+                        }
                     ]}
                 />
             </div>
