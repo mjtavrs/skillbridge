@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 
 import { FiArrowUpRight } from "react-icons/fi";
-import { FcGoogle } from "react-icons/fc";
 
-export default function Form() {
+import PasswordInput from "../../shared/passwordInput/PasswordInput";
+import GoogleButton from "../../shared/googleButton/GoogleButton";
+import Input from "../../shared/input/Input";
+
+export default function LoginForm() {
     return (
         <div className="border-t-[1px] border-white_95 mx-4">
             <div className="bg-white mt-12 p-8 rounded-xl">
@@ -18,35 +23,15 @@ export default function Form() {
                     </div>
                     <div>
                         <div className="flex flex-col gap-5">
-                            <div className="flex flex-col gap-3">
-                                <label
-                                    htmlFor="email"
-                                    className="text-sm text-grey_15 font-medium leading-[150%]"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    className="bg-white_99 border-[1px] border-white_95 text-sm text-grey_40 p-5 rounded-lg"
-                                    placeholder="Enter your Email"
-                                />
-                            </div>
-                            <div className="flex flex-col gap-3">
-                                <label
-                                    htmlFor="password"
-                                    className="text-sm text-grey_15 font-medium leading-[150%]"
-                                >
-                                    Password
-                                </label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    className="bg-white_99 border-[1px] border-white_95 text-sm text-grey_40 p-5 rounded-lg"
-                                    placeholder="Enter your Password"
-                                />
+                            <Input
+                                label="Email"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Enter your Email"
+                            />
+                            <div className="flex flex-col gap-3 relative">
+                                <PasswordInput />
                                 <Link
                                     href="#"
                                     className="text-sm text-grey_30 text-right"
@@ -64,7 +49,10 @@ export default function Form() {
                                 <label htmlFor="remember-user" className="text-sm text-grey_40 leading-[150%]">Remember Me</label>
                             </div>
                             <Link
-                                href=""
+                                href="#"
+                                className="pointer-events-none"
+                                aria-disabled={true}
+                                tabIndex={-1}
                             >
                                 <div className="bg-orange_50 flex justify-center px-5 py-3 rounded-md">
                                     <p className="text-sm text-white font-medium">
@@ -73,6 +61,7 @@ export default function Form() {
                                 </div>
                             </Link>
                         </div>
+                        {/* This div will separate the login options */}
                         <div className="my-6 flex items-center">
                             <div className="flex-1 h-[1px] bg-white_90"></div>
                             <p className="text-sm text-grey_60 mx-4">
@@ -81,16 +70,13 @@ export default function Form() {
                             <div className="flex-1 h-[1px] bg-white_90"></div>
                         </div>
                         <Link
-                            href="#"
+                            href="https://www.google.com"
+                            target="_blank"
+                            title="This button will redirect you to Google.com"
                         >
-                            <div className="bg-white_97 border-[1px] border-white_95 flex items-center justify-center gap-3 px-6 py-3 rounded-md">
-                                <FcGoogle
-                                    className="text-2xl"
-                                />
-                                <p className="text-sm text-grey_15 font-medium">
-                                    Login with Google
-                                </p>
-                            </div>
+                            <GoogleButton
+                                buttonTitle="Login with Google"
+                            />
                         </Link>
                         <div className="flex items-center justify-center gap-2 text-sm text-grey_15 mt-6 leading-[150%]">
                             <div className="flex items-center">
@@ -98,7 +84,7 @@ export default function Form() {
                                     Don&apos;t have an account?&nbsp;
                                 </p>
                                 <Link
-                                    href="#"
+                                    href="/signup"
                                     className="font-medium underline"
                                 >
                                     Sign Up
