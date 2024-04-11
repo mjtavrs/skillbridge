@@ -1,9 +1,9 @@
-import Image, { StaticImageData } from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
     userTestimonial: string,
-    userPicture: StaticImageData,
+    userPicture: string,
     userFullName: string
 }
 
