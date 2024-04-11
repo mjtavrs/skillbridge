@@ -1,5 +1,4 @@
-import TestimonialsCard from "../testimonialsCard/TestimonialsCard";
-import testimonials from "../../../data/testimonialsData";
+import MapTestimonials from "@/components/shared/mapTestimonials/MapTestimonials";
 import HomeSection from "../homeSection/HomeSection";
 
 export default function TestimonialsContainer() {
@@ -9,16 +8,7 @@ export default function TestimonialsContainer() {
                 title="Our Testimonials"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, assumenda. Aut ipsa, obcaecati omnis rerum error eaque, dicta cum, nihil expedita voluptates commodi? Totam facilis ea earum culpa, officiis eum!"
             >
-                {
-                    testimonials.map((testimonial, index) => (
-                        <TestimonialsCard
-                            key={index}
-                            userTestimonial={testimonial.testimonial}
-                            userPicture={testimonial.profile_pic}
-                            userFullName={testimonial.name}
-                        />
-                    ))
-                }
+                <MapTestimonials />
             </HomeSection>
         </div>
     );
