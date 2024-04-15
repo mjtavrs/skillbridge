@@ -1,6 +1,5 @@
 "use client";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import { AnimatePresence } from "framer-motion";
 
 import MapTestimonials from "../mapTestimonials/MapTestimonials";
 
@@ -15,10 +14,8 @@ export default function TestimonialsCarousel() {
                     Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
                 </p>
             </div>
-            <div className="mt-10 mb-5 relative">
-                <AnimatePresence mode="wait">
-                    <MapTestimonials />
-                </AnimatePresence>
+            <div className="mt-10 mb-5">
+                <MapTestimonials />
             </div>
             <div className="flex items-center justify-center gap-3 text-xl text-grey_15">
                 <div className="bg-white border-[1px] border-white_95 rounded-md p-3">
