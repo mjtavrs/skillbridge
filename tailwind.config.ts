@@ -32,6 +32,10 @@ const config: Config = {
       },
       transformOrigin: {
         "play-video": "50% 50%"
+      },
+      screens: {
+        "sm": "375px",
+        "laptop": "1400px"
       }
     },
   },

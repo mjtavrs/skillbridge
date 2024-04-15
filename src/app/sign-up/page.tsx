@@ -1,3 +1,4 @@
+import TestimonialsCarousel from "@/components/shared/testimonialsCarousel/TestimonialsCarousel";
 import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
 import SignUpForm from "@/components/signUp/signUpForm/SignUpForm";
 import Footer from "@/components/shared/footer/Footer";
@@ -9,6 +10,7 @@ export default function LogIn() {
             <Cta />
             <NavigationMenu />
             <SignUpForm />
+            <TestimonialsCarousel />
             <Footer />
         </>
     );
