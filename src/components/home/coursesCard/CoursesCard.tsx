@@ -4,7 +4,7 @@ import Link from "next/link";
 import Tag from "@/components/shared/tag/Tag";
 
 type Props = {
-    cover: StaticImageData,
+    cover: string,
     tags: Array<string>
     author: string,
     title: string,
@@ -24,7 +24,7 @@ export default function CoursesCard({ cover, tags, author, title, description }:
                         className="rounded-md"
                     />
                 </div>
-                <div>
+                <div className="laptop:flex laptop:justify-between">
                     <div className="flex gap-3 mb-3">
                         {
                             tags.map((tag) => (
@@ -40,10 +40,10 @@ export default function CoursesCard({ cover, tags, author, title, description }:
                     </h4>
                 </div>
                 <div>
-                    <h3 className="text-grey_15 text-lg font-semibold mb-3 leading-[150%]">
+                    <h3 className="text-grey_15 text-lg laptop:text-xl font-semibold mb-3 leading-[150%]">
                         {title}
                     </h3>
-                    <p className="text-grey_30 text-sm leading-[150%]">
+                    <p className="text-grey_30 text-sm laptop:text-base leading-[150%]">
                         {description}
                     </p>
                 </div>

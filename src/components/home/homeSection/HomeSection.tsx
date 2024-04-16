@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { useState, useEffect, ReactNode } from "react";
 
 type Props = {
     title: string,
@@ -10,10 +11,20 @@ type Props = {
 }
 
 export default function HomeSection({ title, description, link, colNumber, children }: Props) {
+
+    const [columns, setColumns] = useState<number>(1);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setColumns(window.innerWidth < 1400 ? 1 : colNumber)
+        }
+    }, []);
+
     const customStyles = {
         display: "grid",
-        gridTemplateColumns: `repeat(${colNumber}, minmax(0, 1fr))`,
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
         gap: "20px",
+        marginTop: "40px"
     };
 
     return (
