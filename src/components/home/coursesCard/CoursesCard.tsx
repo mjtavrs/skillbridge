@@ -15,7 +15,7 @@ export default function CoursesCard({ cover, tags, author, title, description }:
     return (
         <div className="bg-white border-[1px] border-white_95 p-6 rounded-xl">
             <div className="flex flex-col gap-6">
-                <div className="relative h-44 w-full">
+                <div className="relative sm:h-44 laptop:h-64 w-full">
                     <Image
                         src={cover}
                         alt="Course cover"
