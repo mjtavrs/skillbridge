@@ -24,7 +24,7 @@ export default function FaqCard({ faqTitle, faqAnswer, faqLink, faqLinkTitle }: 
     return (
         <div className="border-[1px] border-white_95 p-6 rounded-xl">
             <div className="overflow-hidden">
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 laptop:gap-10 laptop:justify-between">
                     <h3 className="text-grey_15 font-medium leading-[150%]">
                         {faqTitle}
                     </h3>
@@ -61,7 +61,7 @@ export default function FaqCard({ faqTitle, faqAnswer, faqLink, faqLinkTitle }: 
                         <p className="text-sm text-grey_30 leading-[150%]">
                             {faqAnswer}
                         </p>
-                        <div className="bg-white_97 flex items-center border-[1px] border-white_95 px-5 py-3 rounded-md">
+                        <div className="bg-white_97 flex items-center laptop:justify-between border-[1px] border-white_95 px-5 py-3 rounded-md">
                             <h4 className="text-sm text-grey_20 font-medium leading-[150%]">
                                 {faqLinkTitle}
                             </h4>
