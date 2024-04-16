@@ -7,6 +7,8 @@ export default function TestimonialsContainer() {
             <HomeSection
                 title="Our Testimonials"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, assumenda. Aut ipsa, obcaecati omnis rerum error eaque, dicta cum, nihil expedita voluptates commodi? Totam facilis ea earum culpa, officiis eum!"
+                link="#"
+                colNumber={2}
             >
                 <MapTestimonials />
             </HomeSection>

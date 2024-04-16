@@ -15,6 +15,14 @@ const benefitsData = [
         title: "Updated Curriculum",
         description: "Access courses with up-to-date content reflecting the latest trends and industry practices."
     },
+    {
+        title: "Practical Projects and Assignments",
+        description: "Develop a portfolio showcasing your skills and abilities to potential employers."
+    },
+    {
+        title: "Interactive Learning Environment",
+        description: "Collaborate with fellow learners, exchanging ideas and feedback to enhance your understanding."
+    },
 ];
 
 export default benefitsData;

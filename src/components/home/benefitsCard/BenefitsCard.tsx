@@ -8,7 +8,7 @@ type Props = {
 
 export default function BenefitsCard({ benefitNumber, benefitTitle, benefitDescription }: Props) {
     return (
-        <div className="bg-white p-8 rounded-xl">
+        <div className="bg-white p-8 rounded-xl w-full">
             <div>
                 <h3 className="text-5xl text-grey_15 text-right font-bold mb-8 leading-6">
                     {benefitNumber}
