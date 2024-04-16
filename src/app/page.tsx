@@ -4,7 +4,7 @@ import CoursesContainer from "@/components/home/coursesContainer/CoursesContaine
 import NavigationMenu from "@/components/shared/navigationMenu/NavigationMenu";
 import FaqContainer from "@/components/home/faqContainer/FaqContainer";
 import HomeVideo from "../../public/assets/png/covers/homeVideo.png";
-import Companies from "@/components/home/companies/Companies";
+import CompaniesMobile from "@/components/home/companiesMobile/CompaniesMobile";
 import Footer from "@/components/shared/footer/Footer";
 import Prices from "@/components/home/prices/Prices";
 import Video from "@/components/shared/video/Video";
@@ -17,7 +17,7 @@ export default function Home() {
       <Cta />
       <NavigationMenu />
       <Hero />
-      <Companies />
+      <CompaniesMobile />
       <Video
         cover={HomeVideo}
       />

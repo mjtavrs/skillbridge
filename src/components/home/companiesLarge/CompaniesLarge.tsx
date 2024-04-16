@@ -1,6 +1,7 @@
 import Image from "next/image";
+import companiesLogos from "@/data/companiesLogos";
 
-export default function Companies() {
+export default function CompaniesLarge() {
     return (
         <div className="bg-white_99 border-[1px] border-white_95 p-3 mx-4 my-8 rounded-lg">
             <div className="border-r-[1px] border-white_95 py-5 px-8 inline-block">
@@ -31,5 +32,5 @@ export default function Companies() {
                 />
             </div>
         </div>
-    );
+    )
 }
