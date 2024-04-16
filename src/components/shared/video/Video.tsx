@@ -6,7 +6,7 @@ type Props = {
 
 export default function Video({ cover }: Props) {
     return (
-        <div className="mx-4">
+        <div className="mx-4 laptop:mx-20">
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
                 <Image
                     src={cover}
