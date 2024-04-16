@@ -12,7 +12,7 @@ type Props = {
 
 export default function PricesCard({ planCategory, planPrice, availableFeatures, unavailableFeatures }: Props) {
     return (
-        <div className="bg-white_99 border-[1px] border-white_95 rounded-xl">
+        <div className="bg-white_99 border-[1px] border-white_95 rounded-xl laptop:flex-1">
             <div className="flex flex-col gap-8 py-8 px-5">
                 <h4 className="bg-orange_97 border-[1px] border-orange_90 text-grey_15 text-center font-medium py-2 leading-[169%] rounded-sm">
                     {planCategory} Plan
