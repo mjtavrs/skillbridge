@@ -55,10 +55,10 @@ export default function CurriculumClass({ classes }: Props) {
                         initial={false}
                         animate={selectedItems[index] ? "selected" : "unselected"}
                         variants={variants}
-                        className="flex flex-col gap-6 p-6 rounded-md"
+                        className="flex flex-col laptop:flex-row laptop:items-center gap-6 p-6 rounded-md"
                         key={index}
                     >
-                        <div>
+                        <div className="laptop:flex-1">
                             <h4 className="text-grey_20 font-medium leading-[150%]">
                                 {title}
                             </h4>
@@ -70,7 +70,7 @@ export default function CurriculumClass({ classes }: Props) {
                             initial={false}
                             animate={selectedItems[index] ? "selected" : "unselected"}
                             variants={durationVariants}
-                            className="bg-white_97 flex items-center gap-1 p-3 text-grey_35 text-sm rounded-md w-fit"
+                            className="bg-white_97 flex items-center gap-1 p-3 text-grey_35 text-sm rounded-md w-fit laptop:h-10"
                         >
                             <div>
                                 <CiClock2

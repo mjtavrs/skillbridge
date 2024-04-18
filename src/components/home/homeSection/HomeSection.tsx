@@ -1,6 +1,7 @@
 "use client";
+import ColOrganizer from "@/components/shared/colOrganizer/ColOrganizer";
 import Link from "next/link";
-import { useState, useEffect, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type Props = {
     title: string,
@@ -11,22 +12,6 @@ type Props = {
 }
 
 export default function HomeSection({ title, description, link, colNumber, children }: Props) {
-
-    const [columns, setColumns] = useState<number>(1);
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            setColumns(window.innerWidth < 1400 ? 1 : colNumber)
-        }
-    }, []);
-
-    const customStyles = {
-        display: "grid",
-        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
-        gap: "20px",
-        marginTop: "40px"
-    };
-
     return (
         <div className="mx-4 laptop:mx-20">
             <div className="laptop:flex laptop:items-end laptop:justify-between">
@@ -47,9 +32,9 @@ export default function HomeSection({ title, description, link, colNumber, child
                     </Link>
                 </div>
             </div>
-            <div style={customStyles}>
+            <ColOrganizer colNumber={colNumber}>
                 {children}
-            </div>
+            </ColOrganizer>
         </div>
     );
 }
