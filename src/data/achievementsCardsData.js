@@ -2,7 +2,7 @@ import { FaCrown, FaMedal } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa6";
 import { IoIosHappy } from "react-icons/io";
 
-const aboutCardsData = [
+const achievementsCardsData = [
     {
         icon: <FaCrown />,
         title: "Trusted by Thousands",
@@ -25,4 +25,4 @@ const aboutCardsData = [
     }
 ];
 
-export default aboutCardsData;
+export default achievementsCardsData;
