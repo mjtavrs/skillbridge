@@ -19,8 +19,7 @@ export default function ColOrganizer({ colNumber, children }: Props) {
     const customStyles = {
         display: "grid",
         gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
-        gap: "20px",
-        marginTop: "40px"
+        gap: "20px"
     };
 
     return (

@@ -25,10 +25,10 @@ export default function AboutCard({ info }: Props) {
                             </span>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-grey_15 text-lg font-medium leading-[150%]">
+                            <h3 className="text-grey_15 text-lg laptop:text-xl font-medium leading-[150%]">
                                 {title}
                             </h3>
-                            <p className="text-grey_35 text-sm leading-[150%]">
+                            <p className="text-grey_35 text-sm laptop:text-base leading-[150%]">
                                 {description}
                             </p>
                         </div>
