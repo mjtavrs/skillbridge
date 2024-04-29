@@ -17,7 +17,7 @@ export default function TestimonialsCarousel() {
             <div className="mt-10 mb-5">
                 <MapTestimonials />
             </div>
-            <div className="flex items-center justify-center gap-3 text-xl text-grey_15">
+            <div className="flex items-center justify-center laptop:justify-end gap-3 text-xl text-grey_15">
                 <div className="bg-white border-[1px] border-white_95 rounded-md p-3">
                     <FaArrowLeft
                     />
