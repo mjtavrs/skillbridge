@@ -1,7 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function CtaCard() {
+    const [size, setSize] = useState<number>(1);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setSize(window.innerWidth < 1400 ? 235 : 380)
+        }
+    }, []);
+
     return (
         <div className="bg-white p-8 mx-4 laptop:mx-20 mt-12 rounded-xl relative">
             <div className="flex flex-col laptop:flex-row laptop:items-center gap-10 laptop:gap-[300px]">
@@ -23,7 +33,7 @@ export default function CtaCard() {
                 </div>
             </div>
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div style={{ width: 235, height: 235 }} className="absolute top-44 left-52 laptop:top-0 laptop:left-[800px] opacity-40">
+                <div style={{ height: size, width: size }} className="absolute top-44 left-52 laptop:top-[-40%] laptop:left-[60%] opacity-40">
                     <Image
                         src="/assets/svg/abstract-logo.svg"
                         alt="Skillbridge's abstract logo"
