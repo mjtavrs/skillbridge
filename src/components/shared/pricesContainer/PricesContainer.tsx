@@ -2,7 +2,7 @@ import PricesCard from "../../home/pricesCard/PricesCard";
 
 export default function PricesContainer() {
     return (
-        <div className="bg-white flex sm:flex-col gap-8 sm:p-5 mt-10 rounded-xl laptop:p-12 laptop:flex-row">
+        <div className="bg-white flex flex-col gap-8 p-5 mt-10 rounded-xl laptop:mt-12 laptop:p-12 laptop:flex-row">
             <PricesCard
                 planCategory="Free"
                 planPrice="0"

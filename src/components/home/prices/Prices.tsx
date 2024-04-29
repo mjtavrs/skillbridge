@@ -1,3 +1,4 @@
+import MonthlyYearlyPricesButton from "@/components/shared/monthlyYearlyPricesButton/MonthlyYearlyPricesButton";
 import PricesContainer from "@/components/shared/pricesContainer/PricesContainer";
 
 export default function Prices() {
@@ -12,18 +13,7 @@ export default function Prices() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptas cupiditate consequuntur quidem quos quas dolor natus tempore cum ratione, quaerat iusto voluptate obcaecati soluta fugit exercitationem eius laudantium suscipit!
                     </p>
                 </div>
-                <div className="flex justify-center">
-                    <div className="bg-white p-3 rounded-lg inline-block">
-                        <div className="flex">
-                            <div className="bg-orange_50 text-white py-3 px-6 rounded-md">
-                                <p className="text-sm font-medium">Monthly</p>
-                            </div>
-                            <div className="text-grey_30 py-3 px-6 rounded-md">
-                                <p className="text-sm font-medium">Yearly</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <MonthlyYearlyPricesButton />
             </div>
             <PricesContainer />
         </div>
